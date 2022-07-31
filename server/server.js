@@ -5,9 +5,8 @@ const { authMiddleware } = require('./utils/auth');
 
 const { typeDefs, resolvers } = require('./schemas');
 const db = require('./config/connection');
-const {
-  graphqlUploadExpress, // A Koa implementation is also exported.
-} = require('graphql-upload');
+const graphqlUploadExpress = require('graphql-upload/graphqlUploadExpress.js');
+
 const PORT = process.env.PORT || 3001;
 const app = express();
 const server = new ApolloServer({
@@ -15,7 +14,7 @@ const server = new ApolloServer({
   resolvers,
   context: authMiddleware,
   uploads: false,
-  //csrfPrevention: true,
+  csrfPrevention: true,
 });
 
 

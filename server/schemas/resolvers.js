@@ -2,9 +2,8 @@ const { AuthenticationError } = require('apollo-server-express');
 const { User, Story } = require('../models');
 const { signToken } = require('../utils/auth');
 
-const {
-  GraphQLUpload,
-} = require('graphql-upload');
+const GraphQLUpload = require('graphql-upload/GraphQLUpload.js');
+
 
 
 const resolvers = {
@@ -54,18 +53,12 @@ const resolvers = {
 
       return { token, user };
     },
-    addStory: async (parent, { storyText, storyImage }, context) => {
+    addStory: async (parent, { storyText }, context) => {
       if (context.user) {
         const story = await Story.create({
           storyText,
           storyAuthor: context.user.username,
-          storyImage: storyImage.file.originalname
         });
-
-        newStory
-        .save()
-        .then(() => res.json ("Your story has been successfully posted!!"))
-        .catch((err) => res.status(400).json(`Error: ${err}`));
 
         await User.findOneAndUpdate(
           { _id: context.user._id },
@@ -76,7 +69,8 @@ const resolvers = {
       }
       throw new AuthenticationError('You need to be logged in!');
     },
-    addFile: async(parent, {file}) => {
+
+    addFile: async (parent, { file }) => {
       const { createReadStream, filename, mimetype, encoding } = await file;
 
       // Invoking the `createReadStream` will return a Readable Stream.
@@ -89,6 +83,7 @@ const resolvers = {
 
       return { filename, mimetype, encoding };
     },
+
     addComment: async (parent, { storyId, commentText }, context) => {
       if (context.user) {
         return Story.findOneAndUpdate(
