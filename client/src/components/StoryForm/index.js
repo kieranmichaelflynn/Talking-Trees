@@ -7,6 +7,10 @@ import { QUERY_STORIES, QUERY_ME } from '../../utils/queries';
 
 import Auth from '../../utils/auth';
 
+//
+// import FileBase from 'react-file-base64';
+
+
 const StoryForm = () => {
   const [storyText, setStoryText] = useState('');
   const [storyImage, setStoryImage] = useState('');
@@ -64,7 +68,7 @@ const StoryForm = () => {
   };
 
   const handleImage = (event) => {
-    setStoryImage({ storyImage: event.target.files[0]})
+    setStoryImage({ storyImage: event.target.files[0] })
     console.log(storyImage)
   }
 
@@ -77,9 +81,8 @@ const StoryForm = () => {
       {Auth.loggedIn() ? (
         <>
           <p
-            className={`m-0 ${
-              characterCount === 280 || error ? 'text-danger' : ''
-            }`}
+            className={`m-0 ${characterCount === 280 || error ? 'text-danger' : ''
+              }`}
           >
             Character Count: {characterCount}/280
           </p>
@@ -99,12 +102,16 @@ const StoryForm = () => {
             </div>
 
             <input
-            type="file"
-            accept='.png, .jpg, .jpeg'
-            name='storyImage'
-            onChange={handleImage}
+              type="file"
+              accept='.png, .jpg, .jpeg'
+              name='storyImage'
+              onChange={handleImage}
             >
-            
+
+              {/*  */}
+              {/* <div><FileBase type="file" multiple={false} onDone={({ base64 }) => setStoryImage({ ...storyImage, selectedFile: base64 })} /></div> */}
+
+
             </input>
 
             <div className="col-12 col-lg-3">

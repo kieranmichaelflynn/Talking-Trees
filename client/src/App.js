@@ -14,6 +14,7 @@ import Login from './pages/Login';
 import SingleStory from './pages/SingleStory';
 import Profile from './pages/Profile';
 import Header from './components/Header';
+import About from './pages/About';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 
@@ -55,6 +56,10 @@ function App() {
               <Route
                 path="/"
                 element={<Home />}
+              />
+              <Route
+                path="/about"
+                element={<About />}
               />
               <Route
                 path="/login"

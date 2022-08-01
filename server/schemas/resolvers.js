@@ -53,11 +53,12 @@ const resolvers = {
 
       return { token, user };
     },
-    addStory: async (parent, { storyText }, context) => {
+    addStory: async (parent, { storyText, storyImage }, context) => {
       if (context.user) {
         const story = await Story.create({
           storyText,
           storyAuthor: context.user.username,
+          storyImage
         });
 
         await User.findOneAndUpdate(

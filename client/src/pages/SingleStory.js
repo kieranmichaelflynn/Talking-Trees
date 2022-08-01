@@ -24,27 +24,26 @@ const SingleStory = () => {
     return <div>Loading...</div>;
   }
   return (
-    <div className="my-3">
-      <h3 className="card-header bg-dark text-light p-2 m-0">
-        {story.storyAuthor} <br />
-        <span style={{ fontSize: '1rem' }}>
-          posted about this tree on {story.createdAt}
-        </span>
-      </h3>
-      <div className="bg-light py-4">
-        <blockquote
-          className="p-4"
-          style={{
-            fontSize: '1.5rem',
-            fontStyle: 'italic',
-            border: '2px dotted #1a1a1a',
-            lineHeight: '1.5',
-          }}
-        >
-          {story.storyText}
-        </blockquote>
-      </div>
+    <div>
+      <div className="container">
+        <h3 className="card-header bg-dark text-light p-2 m-0">
+          {story.storyAuthor} <br />
+          <div className='container__info cont_top'>
 
+            <span style={{ fontSize: '1rem' }}>
+              posted about this tree on {story.createdAt}
+            </span>
+          </div>
+
+        </h3>
+        <div className="container__profile__text container__profile">
+          <blockquote
+          >
+            {story.storyText}
+          </blockquote>
+        </div>
+
+      </div >
       <div className="my-5">
         <CommentList comments={story.comments} />
       </div>

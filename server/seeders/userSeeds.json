@@ -3,5 +3,25 @@
     "username": "Steven",
     "email": "steven@money.com",
     "password": "password"
+  },
+  {
+    "username": "Neville Grey",
+    "email": "nev@gmail.com",
+    "password": "password"
+  },
+  {
+    "username": "Tory",
+    "email": "tory@gmail.com",
+    "password": "password"
+  },
+  {
+    "username": "Tina and Ellie",
+    "email": "tina@gmail.com",
+    "password": "password"
+  },
+  {
+    "username": "Tristan",
+    "email": "tristan@gmail.com",
+    "password": "password"
   }
 ]

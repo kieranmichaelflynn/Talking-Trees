@@ -19,7 +19,7 @@ const StoryList = ({
           <div key={story._id} className="container">
             <h4 className="card-header bg-primary text-light p-2 m-0">
               {showUsername ? (
-                <div className='container__info'>
+                <div className='container__info cont_top'>
 
                 <Link
                   className="text-light"

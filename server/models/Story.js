@@ -14,9 +14,13 @@ const storySchema = new Schema({
     required: true,
     trim: true,
   },
-  // storyImage: {
-  //   type: String,
-  //   required: true,
+  storyImage: {
+    type: String,
+    required: false,
+  },
+  // likeCount: {
+  //   type: Number,
+  //   default: 0,
   // },
   createdAt: {
     type: Date,
@@ -29,7 +33,7 @@ const storySchema = new Schema({
         type: String,
         required: true,
         minlength: 1,
-        maxlength: 280,
+        maxlength: 4980,
       },
       commentAuthor: {
         type: String,
