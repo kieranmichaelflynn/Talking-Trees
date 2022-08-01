@@ -19,11 +19,11 @@ scalar Upload
     comments: [Comment]!
   }
 
-  type File {
-    filename: String!
-    mimetype: String!
-    encoding: String!
-  }
+  // type File {
+  //   filename: String!
+  //   mimetype: String!
+  //   encoding: String!
+  // }
 
   type Comment {
     _id: ID
@@ -49,7 +49,7 @@ scalar Upload
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
     addStory(storyText: String!): Story
-    addFile(file: Upload!): File!
+    // addFile(file: Upload!): File!
     addComment(storyId: ID!, commentText: String!): Story
     removeStory(storyId: ID!): Story
     removeComment(storyId: ID!, commentId: ID!): Story

@@ -5,7 +5,7 @@ const { authMiddleware } = require('./utils/auth');
 
 const { typeDefs, resolvers } = require('./schemas');
 const db = require('./config/connection');
-const graphqlUploadExpress = require('graphql-upload/graphqlUploadExpress.js');
+// const graphqlUploadExpress = require('graphql-upload/graphqlUploadExpress.js');
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -14,7 +14,7 @@ const server = new ApolloServer({
   resolvers,
   context: authMiddleware,
   uploads: false,
-  csrfPrevention: true,
+  // csrfPrevention: true,
 });
 
 
@@ -34,7 +34,7 @@ app.get('/', (req, res) => {
 // Create a new instance of an Apollo server with the GraphQL schema
 const startApolloServer = async (typeDefs, resolvers) => {
   await server.start();
-  app.use(graphqlUploadExpress());
+  // app.use(graphqlUploadExpress());
   server.applyMiddleware({ app });
   
   db.once('open', () => {

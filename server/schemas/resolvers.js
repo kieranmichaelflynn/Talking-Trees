@@ -2,7 +2,7 @@ const { AuthenticationError } = require('apollo-server-express');
 const { User, Story } = require('../models');
 const { signToken } = require('../utils/auth');
 
-const GraphQLUpload = require('graphql-upload/GraphQLUpload.js');
+// const GraphQLUpload = require('graphql-upload/GraphQLUpload.js');
 
 
 
@@ -70,19 +70,19 @@ const resolvers = {
       throw new AuthenticationError('You need to be logged in!');
     },
 
-    addFile: async (parent, { file }) => {
-      const { createReadStream, filename, mimetype, encoding } = await file;
+    // addFile: async (parent, { file }) => {
+    //   const { createReadStream, filename, mimetype, encoding } = await file;
 
-      // Invoking the `createReadStream` will return a Readable Stream.
-      // See https://nodejs.org/api/stream.html#stream_readable_streams
-      const stream = createReadStream();
+    //   // Invoking the `createReadStream` will return a Readable Stream.
+    //   // See https://nodejs.org/api/stream.html#stream_readable_streams
+    //   const stream = createReadStream();
 
-      const out = require('fs').createWriteStream(filename);
-      stream.pipe(out);
-      await finished(out);
+    //   const out = require('fs').createWriteStream(filename);
+    //   stream.pipe(out);
+    //   await finished(out);
 
-      return { filename, mimetype, encoding };
-    },
+    //   return { filename, mimetype, encoding };
+    // },
 
     addComment: async (parent, { storyId, commentText }, context) => {
       if (context.user) {
