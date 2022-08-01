@@ -8,6 +8,8 @@ import CommentList from '../components/CommentList';
 import CommentForm from '../components/CommentForm';
 
 import { QUERY_SINGLE_STORY } from '../utils/queries';
+import { QUERY_USER, QUERY_ME } from '../utils/queries';
+
 
 const SingleStory = () => {
   // Use `useParams()` to retrieve value of the route parameter `:profileId`
@@ -19,6 +21,10 @@ const SingleStory = () => {
   });
 
   const story = data?.story || {};
+  
+ 
+
+
 
   if (loading) {
     return <div>Loading...</div>;
@@ -27,11 +33,12 @@ const SingleStory = () => {
     <div>
       <div className="container">
         <h3 className="card-header bg-dark text-light p-2 m-0">
-          {story.storyAuthor} <br />
+          {story.storyAuthor}'s story <br />
+
           <div className='container__info cont_top'>
 
             <span style={{ fontSize: '1rem' }}>
-              posted about this tree on {story.createdAt}
+              shared on {story.createdAt}
             </span>
           </div>
 

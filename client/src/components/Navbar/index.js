@@ -58,6 +58,46 @@ export default Navbar;
 
 
 const NavbarContainer = styled.div`
+
+position: fixed;
+display: block;
+height: 5em;
+min-width: 100vw;
+background: #77A17A;
+z-index: 10;
+overlay: hidden;
+
+@media only screen and (max-width: 300px) {
+    position: fixed;
+    display: block;
+    height: 20em;
+    min-width: 100vw;
+    background: #77A17A;
+    z-index: 10;
+    overlay: hidden;
+  }
+@media only screen and (max-width: 385px) {
+    position: fixed;
+    display: block;
+    height: 15em;
+    min-width: 100vw;
+    background: #77A17A;
+    z-index: 10;
+    overlay: hidden;
+  }
+  
+  
+  @media only screen and (max-width: 642px) {
+    position: fixed;
+    display: block;
+    height: 10em;
+    min-width: 100vw;
+    background: #77A17A;
+    z-index: 10;
+    overlay: hidden;
+  }
+  
+  @media only screen and (min-width: 1200px) {
     position: fixed;
     display: block;
     height: 5em;
@@ -65,4 +105,6 @@ const NavbarContainer = styled.div`
     background: #77A17A;
     z-index: 10;
     overlay: hidden;
+  }
+
   `;

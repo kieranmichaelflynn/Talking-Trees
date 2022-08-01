@@ -28,7 +28,7 @@ const StoryList = ({
                     <div className='container__info'>
                   {story.storyAuthor} 
                   <span style={{ fontSize: '1rem' }}>
-                    posted about this tree on {story.createdAt}
+                    shared on {story.createdAt}
                   </span>
                     </div>
                       
@@ -37,18 +37,24 @@ const StoryList = ({
               ) : (
                 <>
                   <span style={{ fontSize: '1rem' }}>
-                    You posted about this tree on {story.createdAt}
+                     Shared on {story.createdAt}
                   </span>
                 </>
               )}
             </h4>
             <div className="container__profile__text container__profile">
+            <Link
+                  style={{color: "black", textDecoration: "none"}}
+                  to={`/profiles/${story.storyAuthor}`}
+                  >
               <p>{story.storyText}</p>
+              </Link>
+
             <Link
               className="btn btn-primary btn-block btn-squared"
               to={`/stories/${story._id}`}
               >
-              Join the discussion on this tree.
+              Talk more about this tree.
             </Link>
               </div>
           </div>
