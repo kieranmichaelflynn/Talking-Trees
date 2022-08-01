@@ -63,7 +63,7 @@ position: fixed;
 display: block;
 height: 5em;
 min-width: 100vw;
-background: #77A17A;
+background: #6CBB3C;
 z-index: 10;
 overlay: hidden;
 
@@ -72,7 +72,7 @@ overlay: hidden;
     display: block;
     height: 20em;
     min-width: 100vw;
-    background: #77A17A;
+    background: #6CBB3C;
     z-index: 10;
     overlay: hidden;
   }
@@ -81,7 +81,7 @@ overlay: hidden;
     display: block;
     height: 15em;
     min-width: 100vw;
-    background: #77A17A;
+    background: #6CBB3C;
     z-index: 10;
     overlay: hidden;
   }
@@ -92,7 +92,7 @@ overlay: hidden;
     display: block;
     height: 10em;
     min-width: 100vw;
-    background: #77A17A;
+    background: #6CBB3C;
     z-index: 10;
     overlay: hidden;
   }
@@ -102,7 +102,7 @@ overlay: hidden;
     display: block;
     height: 5em;
     min-width: 100vw;
-    background: #77A17A;
+    background: #6CBB3C;
     z-index: 10;
     overlay: hidden;
   }
