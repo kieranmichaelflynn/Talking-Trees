@@ -9,6 +9,7 @@ export const QUERY_USER = gql`
       stories {
         _id
         storyText
+        storyImage
         createdAt
       }
     }
@@ -20,6 +21,7 @@ export const QUERY_STORIES = gql`
     stories {
       _id
       storyText
+      storyImage
       storyAuthor
       createdAt
     }
@@ -54,6 +56,7 @@ export const QUERY_ME = gql`
         _id
         storyText
         storyAuthor
+        storyImage
         createdAt
       }
     }

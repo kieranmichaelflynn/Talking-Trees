@@ -1,6 +1,10 @@
 import React from 'react';
+// import { REMOVE_COMMENT } from '../../utils/mutations';
+
+
 
 const CommentList = ({ comments = [] }) => {
+  // const [removeComment, { error }] = useMutation(REMOVE_COMMENT);
   if (!comments.length) {
     return <h3>No Comments Yet</h3>;
   }
@@ -26,6 +30,9 @@ const CommentList = ({ comments = [] }) => {
                 </h5>
                 <p className="card-body">{comment.commentText}</p>
               </div>
+              <button className="button1" type="submit"
+              //  onSubmit={handleRemove}
+               > Remove</button>
             </div>
           ))}
       </div>

@@ -30,6 +30,8 @@ const StoryList = ({
                   <span style={{ fontSize: '1rem' }}>
                     shared on {story.createdAt}
                   </span>
+                  
+                  <img src={story.storyImage}></img>
                     </div>
                       
                 </Link>

@@ -51,9 +51,9 @@ function App() {
           </div>
         <div className="flex-column justify-flex-start">
           <Header />
-          <div className="container">
+          <div >
             <Routes>
-              <Route
+              <Route className="container"
                 path="/"
                 element={<Home />}
               />
@@ -69,15 +69,15 @@ function App() {
                 path="/signup"
                 element={<Signup />}
               />
-              <Route
+              <Route className="container"
                 path="/me"
                 element={<Profile />}
               />
-              <Route
+              <Route className="container"
                 path="/profiles/:username"
                 element={<Profile />}
               />
-              <Route
+              <Route className="container"
                 path="/stories/:storyId"
                 element={<SingleStory />}
               />
