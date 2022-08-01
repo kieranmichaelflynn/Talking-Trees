@@ -19,7 +19,7 @@ const Header = () => {
         <div>
           <div>
             <Link className="text-light" style={{ justifyContent: "center", alignItems: "center" }} to="/">
-              <img style={{ position: "absolute", width: "370px", height: "282px", left: "calc(50% - 370px/2)", top: "calc(50% - 282px/2 - 202px)" }} src={logo} alt="logo" />
+              <img style={{ position: "absolute", width: "370px", height: "282px", left: "calc(50% - 370px/2)", top: "calc(50% - 282px/2 - 102px)" }} src={logo} alt="logo" />
 
             </Link>
           </div>

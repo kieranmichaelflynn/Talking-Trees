@@ -10,6 +10,14 @@ import CommentForm from '../components/CommentForm';
 import { QUERY_SINGLE_STORY } from '../utils/queries';
 import { QUERY_USER, QUERY_ME } from '../utils/queries';
 
+import Auth from '../utils/auth';
+
+
+import styled from "styled-components";
+
+import imageURL from './Image';
+
+
 
 const SingleStory = () => {
   // Use `useParams()` to retrieve value of the route parameter `:profileId`
@@ -31,6 +39,7 @@ const SingleStory = () => {
   }
   return (
     <div>
+      <imageURL>
       <div className="container">
         <h3 className="card-header bg-dark text-light p-2 m-0">
           {story.storyAuthor}'s story <br />
@@ -51,6 +60,7 @@ const SingleStory = () => {
         </div>
 
       </div >
+      </imageURL>
       <div className="my-5">
         <CommentList comments={story.comments} />
       </div>
@@ -62,3 +72,5 @@ const SingleStory = () => {
 };
 
 export default SingleStory;
+
+

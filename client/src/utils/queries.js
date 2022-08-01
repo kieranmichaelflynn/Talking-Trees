@@ -33,6 +33,7 @@ export const QUERY_SINGLE_STORY = gql`
       storyText
       storyAuthor
       createdAt
+      storyImage
       comments {
         _id
         commentText

@@ -70,13 +70,13 @@ overlay: hidden;
 @media only screen and (max-width: 300px) {
     position: fixed;
     display: block;
-    height: 20em;
+    height: 1em;
     min-width: 100vw;
     background: #6CBB3C;
     z-index: 10;
     overlay: hidden;
   }
-@media only screen and (max-width: 385px) {
+@media only screen and (max-width: 390px) {
     position: fixed;
     display: block;
     height: 15em;
@@ -87,7 +87,7 @@ overlay: hidden;
   }
   
   
-  @media only screen and (max-width: 642px) {
+  @media only screen and (max-width: 705px) {
     position: fixed;
     display: block;
     height: 10em;

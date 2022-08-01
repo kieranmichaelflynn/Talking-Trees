@@ -15,6 +15,7 @@ scalar Upload
     _id: ID
     storyText: String
     storyAuthor: String
+    storyImage: String
     createdAt: String
     comments: [Comment]!
   }
@@ -45,7 +46,7 @@ scalar Upload
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
     addStory(storyText: String!): Story
-    
+
     addComment(storyId: ID!, commentText: String!): Story
     removeStory(storyId: ID!): Story
     removeComment(storyId: ID!, commentId: ID!): Story
