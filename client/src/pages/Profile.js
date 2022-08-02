@@ -37,28 +37,23 @@ const Profile = () => {
 
   return (
     <div>
-      <div className="container1">
-        <h2 className="col-12 col-md-10 bg-dark text-light p-3 mb-5">
-          Viewing {userParam ? `${user.username}'s` : 'your'} profile.
-        </h2>
-
-        <div className="col-12 col-md-10 mb-5">
-          <StoryList
-            stories={user.stories}
-            title={`${user.username}'s stories...`}
-            showTitle={false}
-            showUsername={false}
-          />
+      <h2>
+        Viewing {userParam ? `${user.username}'s` : 'your'} profile.
+      </h2>
+      <StoryList
+        stories={user.stories}
+        title={`${user.username}'s stories...`}
+        showTitle={false}
+        showUsername={false}
+      />
+      {!userParam && (
+        <div
+          className="form">
+          {user.stories.length >= 1 ? <h3>Share another story here</h3> : <h3>Share your tree story here</h3>
+          }
+          <StoryForm />
         </div>
-        {!userParam && (
-          <div
-            className="col-12 col-md-10 mb-3 p-3"
-            style={{ border: '1px dotted #1a1a1a' }}
-          >
-            <StoryForm />
-          </div>
-        )}
-      </div>
+      )}
     </div>
   );
 };

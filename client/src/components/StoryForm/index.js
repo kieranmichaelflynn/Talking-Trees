@@ -76,7 +76,6 @@ const StoryForm = () => {
 
   return (
     <div>
-      <h3>Share your tree story here</h3>
 
       {Auth.loggedIn() ? (
         <>

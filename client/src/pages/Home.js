@@ -20,21 +20,23 @@ const Home = () => {
   return (
     <main>
       <div className="flex-row justify-center">
-        <CardMedia image={'https://user-images.githubusercontent.com/194400/49531010-48dad180-f8b1-11e8-8d89-1e61320e1d82.png'} />
+        <CardMedia />
 
         {loading ? (
           <div>Loading...</div>
         ) : (
+          
           <StoryList
             stories={stories}
             title="Browse the latest stories..."
           />
         )}
-        <div style={{marginBottom:"300px"}}>
+        <div style={{ marginBottom: "300px" }}>
+          <h3>Share your tree story here</h3>
           <StoryForm />
         </div>
 
-          {/* <MediaApp /> */}
+        {/* <MediaApp /> */}
         {/* <renderMap /> */}
       </div>
     </main>

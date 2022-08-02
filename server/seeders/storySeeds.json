@@ -6,18 +6,25 @@
   },
   {
     "storyText": "My son has always loved this tree. Now that he is a bit older he has started taking his friends from school to climb it. It has always been there since we moved in which was in 2011, but we were wondering if anyone knew who planted it?",
-    "storyAuthor": "Neville Grey"
+    "storyAuthor": "Neville Grey",
+    "storyImage": "tallghost.jpg"
   },
   {
     "storyText": "With approval from City of Cockburn we've recently planted a couple of jarrahs (which we dug up as seedlings from our property - we already have 3 massive ones on the verge!) but wanted to pop this in as a post so we can keep track of them as they grow!",
-    "storyAuthor": "Tory"
+    "storyAuthor": "Tory",
+    "storyImage": "planting.jpg"
+
   },
   {
     "storyText": "We have a big tuart tree in our street. Every day after school the black tailed cockatoos come past and eat the nuts. I like to draw them for my grandparents - Ellie. Are there any bird watching groups around this area? We love watching them would love to see them more! -Tina",
-    "storyAuthor": "Tina and Ellie"
+    "storyAuthor": "Tina and Ellie",
+    "storyImage": "park.jpg"
+
   },
   {
     "storyText": "We used to have a MASSIVE tree next to our house that provided so much habitat for native fauna. It had been there for decades - the trunk was huge. Sadly developers decided to cut it down. A really sad and shocking day for us. I hope it lives on in this forum",
-    "storyAuthor": "Tristan"
+    "storyAuthor": "Tristan",
+    "storyImage": "massive.jpg"
+
   }
 ]
