@@ -14,7 +14,7 @@ const StoryList = ({
   }
 
   return (
-    <div>
+    <div className='fullWidth'>
       {showTitle && <h3>{title}</h3>}
       {stories &&
         stories.map((story) => (
