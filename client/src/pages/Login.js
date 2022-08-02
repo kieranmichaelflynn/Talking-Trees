@@ -41,7 +41,7 @@ const Login = (props) => {
   };
 
   return (
-    <main className="flex-row justify-center mb-4">
+    <main>
 
       {data ? (
         <p>
@@ -64,8 +64,8 @@ const Login = (props) => {
                 onChange={handleChange}
               />
               <div className="cut"></div>
-                <label for="email" className="placeholder">Email</label>
-              
+              <label for="email" className="placeholder">Email</label>
+
             </div>
 
             <div className="input-container ic2">
@@ -79,8 +79,8 @@ const Login = (props) => {
                 onChange={handleChange}
               />
               <div className="cut"></div>
-                <label for="password" className="placeholder">Password</label>
-              
+              <label for="password" className="placeholder">Password</label>
+
               <button
                 className="btn submit"
                 style={{ cursor: 'pointer' }}
@@ -94,7 +94,7 @@ const Login = (props) => {
       )}
 
       {error && (
-        <div className="my-3 p-3 bg-danger text-white">
+        <div className="alert">
           {error.message}
         </div>
       )}

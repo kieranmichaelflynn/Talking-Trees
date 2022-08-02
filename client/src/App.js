@@ -46,45 +46,39 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-          <div>
-            <Navbar />
-          </div>
-        <div className="flex-column justify-flex-start">
-          <Header />
-          <div >
-            <Routes>
-              <Route className="container"
-                path="/"
-                element={<Home />}
-              />
-              <Route
-                path="/about"
-                element={<About />}
-              />
-              <Route
-                path="/login"
-                element={<Login />}
-              />
-              <Route
-                path="/signup"
-                element={<Signup />}
-              />
-              <Route className="container"
-                path="/me"
-                element={<Profile />}
-              />
-              <Route className="container"
-                path="/profiles/:username"
-                element={<Profile />}
-              />
-              <Route className="container"
-                path="/stories/:storyId"
-                element={<SingleStory />}
-              />
-            </Routes>
-          </div>
-        </div>
-          {/* <Footer /> */}
+        <Navbar />
+        <Header />
+        <Routes>
+          <Route className="container"
+            path="/"
+            element={<Home />}
+          />
+          <Route
+            path="/about"
+            element={<About />}
+          />
+          <Route
+            path="/login"
+            element={<Login />}
+          />
+          <Route
+            path="/signup"
+            element={<Signup />}
+          />
+          <Route className="container"
+            path="/me"
+            element={<Profile />}
+          />
+          <Route className="container"
+            path="/profiles/:username"
+            element={<Profile />}
+          />
+          <Route className="container"
+            path="/stories/:storyId"
+            element={<SingleStory />}
+          />
+        </Routes>
+        {/* <Footer /> */}
       </Router>
     </ApolloProvider>
   );
