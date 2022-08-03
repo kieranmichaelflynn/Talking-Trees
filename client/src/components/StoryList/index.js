@@ -20,7 +20,7 @@ const StoryList = ({
         stories.map((story) => (
 
           <div key={story._id} className="container" 
-          style={{ backgroundImage: story.storyImage ? `url(./uploads/${story.storyImage})` : `url(./uploads/defaultTree.png)`}}>
+          style={{ backgroundImage: story.storyImage ? `url(../uploads/${story.storyImage})` : `url(../uploads/defaultTree.png)`}}>
         
             <h4 className="card-header bg-primary text-light p-2 m-0">
               {showUsername ? (

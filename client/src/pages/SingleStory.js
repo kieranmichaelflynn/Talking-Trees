@@ -15,7 +15,7 @@ import Auth from '../utils/auth';
 
 import styled from "styled-components";
 
-import imageURL from './Image';
+// import imageURL from './Image';
 
 
 
@@ -39,8 +39,8 @@ const SingleStory = () => {
   }
   return (
     <div>
-      <imageURL>
-      <div className="container">
+    
+      <div className="container" style={{ backgroundImage: story.storyImage ? `url(../uploads/${story.storyImage})` : `url(../uploads/defaultTree.png)`}}>
         <h3 className="card-header bg-dark text-light p-2 m-0">
           {story.storyAuthor}'s story <br />
 
@@ -60,7 +60,7 @@ const SingleStory = () => {
         </div>
 
       </div >
-      </imageURL>
+      
       <div className="my-5">
         <CommentList comments={story.comments} />
       </div>
